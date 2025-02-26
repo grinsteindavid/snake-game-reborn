@@ -14,7 +14,7 @@ const FOOD_TYPES = {
 const BASE_SPEED = 100;
 
 let snake = [{ x: 10, y: 10 }];
-let direction = { x: 0, y: 0 };
+let direction = getRandomDirection(); // Replace the initial direction = { x: 0, y: 0 }
 let food = {
   x: 15,
   y: 15,
@@ -92,6 +92,17 @@ function snakeCollision(head) {
   return false;
 }
 
+// Add this new function
+function getRandomDirection() {
+  const directions = [
+    { x: 1, y: 0 },   // right
+    { x: -1, y: 0 },  // left
+    { x: 0, y: 1 },   // down
+    { x: 0, y: -1 }   // up
+  ];
+  return directions[Math.floor(Math.random() * directions.length)];
+}
+
 function resetGame() {
   isPaused = true;
   countdown = 3000;
@@ -103,7 +114,7 @@ function resetGame() {
       clearInterval(countdownInterval);
       isPaused = false;
       snake = [{ x: 10, y: 10 }];
-      direction = { x: 0, y: 0 };
+      direction = getRandomDirection(); // Set random initial direction
       score = 0;
       scoreDisplay.textContent = `Score: ${score}`;
       updateGameSpeed();
