@@ -1,0 +1,15 @@
+{
+  "name": "minigame-001",
+  "version": "1.0.0",
+  "description": "A simple minigame project",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "14.0.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

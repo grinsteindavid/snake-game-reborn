@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minigame 001</title>
+  <style>
+    body {
+      background-color: #222;
+    }
+    .nokia-container {
+      width: 450px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #dcdcdc;
+      border: 10px solid #333;
+      border-radius: 20px;
+      box-shadow: 0 0 20px black;
+      text-align: center;
+    }
+    .score-display {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .food-legend {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 10px 0;
+    }
+    .food-type {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .food-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="nokia-container">
+    <h1>Welcome to Minigame 001</h1>
+    <div id="scoreDisplay" class="score-display">Score: 0</div>
+    <div class="food-legend">
+      <div class="food-type">
+        <span class="food-dot" style="background: red;"></span>
+        <span>Normal Speed</span>
+      </div>
+      <div class="food-type">
+        <span class="food-dot" style="background: blue;"></span>
+        <span>2x Speed</span>
+      </div>
+      <div class="food-type">
+        <span class="food-dot" style="background: yellow;"></span>
+        <span>0.5x Speed</span>
+      </div>
+    </div>
+    <canvas id="gameCanvas" width="400" height="400" style="border: 2px solid #000;"></canvas>
+    <script src="snake.js"></script>
+  </div>
+</body>
+</html>
